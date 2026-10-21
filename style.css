@@ -1,3 +1,4 @@
+/*Codice generato con l'intelligenza artificiale solamente per creare l'ambiente e sviluppare il file javascript*/
 :root{
   --bg:#F2F4FA;--surface:#fff;--ink:#101936;--muted:#5B6486;--line:#E2E6F2;
   --brand:#2D3BFF;--soft:#E9ECFF;--hero:#2D3BFF;--pos:#0B8A5F;--neg:#C9254F;
@@ -148,3 +149,47 @@ main{padding:20px 16px 108px;max-width:1280px;width:100%;margin:0 auto}
   .a4{grid-column:span 4}.a8{grid-column:span 8}.a7{grid-column:span 7}.a5{grid-column:span 5}
 }
 
+/* messaggi per liste vuote */
+.empty{color:var(--muted)}
+[hidden]{display:none!important}
+
+/* ===== gestione movimenti: form, filtri, azioni, budget ===== */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;background:var(--brand);color:var(--surface);font-weight:600}
+.btn .i{width:18px;height:18px}
+.btn.ghost{background:var(--soft);color:var(--brand)}
+.btn:hover{filter:brightness(1.08)}
+.f{display:grid;gap:6px;font-weight:500;font-size:14px}
+.f input,.f select{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:var(--r-sm);padding:10px 12px;min-height:44px;width:100%}
+.month input{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:0 16px;min-height:44px}
+.totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:16px}
+.tl{background:var(--bg);border-radius:var(--r-md);padding:12px 14px;min-width:0}
+.tl small{display:block;color:var(--muted);font-size:13px}
+.tl strong{font:700 17px var(--display);letter-spacing:-.02em;white-space:nowrap}
+.totals-label{margin-bottom:10px}
+.filters{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:14px}
+#transactions-count{font-size:14px;margin-bottom:12px}
+.rowacts{display:flex;gap:2px;flex:none}
+.rowbtn{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:var(--muted)}
+.rowbtn .i{width:18px;height:18px}
+.rowbtn:hover{background:var(--soft);color:var(--ink)}
+.rowbtn[data-action="delete"]:hover{color:var(--neg)}
+.budget{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);display:grid;gap:10px}
+.track.over i{background:var(--neg)}
+#budget-bar{width:var(--p,0%)}
+dialog{border:0;border-radius:var(--r-lg);padding:24px;background:var(--surface);color:var(--ink);width:min(440px,calc(100% - 32px))}
+dialog::backdrop{background:rgba(10,15,34,.55)}
+dialog form{display:grid;gap:14px}
+dialog h2{font:700 22px/1.2 var(--display);letter-spacing:-.02em}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.seg{border:0;margin:0;padding:4px;display:flex;gap:4px;background:var(--soft);border-radius:999px;min-width:0}
+.seg label{flex:1;position:relative}
+.seg input{position:absolute;opacity:0;inset:0}
+.seg span{display:block;text-align:center;padding:10px;border-radius:999px;font-weight:600;color:var(--muted);cursor:pointer}
+.seg input:checked+span{background:var(--surface);color:var(--ink)}
+.seg input:focus-visible+span{outline:3px solid var(--brand)}
+.err{color:var(--neg);font-size:14px}
+.dlg-acts{display:flex;justify-content:flex-end;gap:10px}
+@media (min-width:720px){
+  .filters{grid-template-columns:1.5fr 1fr 1fr auto}
+}
